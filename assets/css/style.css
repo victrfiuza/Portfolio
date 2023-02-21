@@ -7,7 +7,17 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    height: 100vh;
+    border: 3px dashed black;
+    background-image: url(/assets/img/mgk_main.jpg);
+    background-size: 107vh;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 /* ============================================ */
+
 .navbar {
     margin-top: 2%;
     margin-left: 2%;
@@ -34,8 +44,13 @@
 
 /* ============================================ */
 
+.name__center {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 60px;
+}
 
-
+/* ============================================ */
 
 .icons__footer {
     list-style: none;
