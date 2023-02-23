@@ -7,19 +7,47 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
-    height: 100vh;
-    background-image: url(/assets/img/mgk_main\ \(1\).jpg);
-    background-size: 100vh;
-    background-repeat: no-repeat;
-    background-position: right;
+body {}
+
+/*                                                                                                                                               
+ _   _ _____ ___ ____ _   _ _____   ____   ____ ____  _____ _____ _   _ 
+| | | | ____|_ _/ ___| | | |_   _| / ___| / ___|  _ \| ____| ____| \ | |
+| |_| |  _|  | | |  _| |_| | | |   \___ \| |   | |_) |  _| |  _| |  \| |
+|  _  | |___ | | |_| |  _  | | |    ___) | |___|  _ <| |___| |___| |\  |
+|_| |_|_____|___\____|_| |_| |_|   |____/ \____|_| \_|_____|_____|_| \_|
+                                                                                                                                                                                                              
+*/
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* ============================================ */
+.justify__right {
+    justify-content: end;
+}
+
+
+.height__full {
+    height: 100%;
+}
+
+/*                                                                          
+ _   _    ___     _______ ____    _  _____ ___ ___  _   _        ____    _    ____  
+| \ | |  / \ \   / | ____/ ___|  / \|_   _|_ _/ _ \| \ | |      | __ )  / \  |  _ \ 
+|  \| | / _ \ \ / /|  _|| |  _  / _ \ | |  | | | | |  \| |      |  _ \ / _ \ | |_) |
+| |\  |/ ___ \ V / | |__| |_| |/ ___ \| |  | | |_| | |\  |      | |_) / ___ \|  _ < 
+|_| \_/_/   \_\_/  |_____\____/_/   \_|_| |___\___/|_| \_|      |____/_/   \_|_| \_\
+                                                                                                                                         
+*/
 
 .navbar {
-    margin-top: 2%;
-    margin-left: 2%;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
+    padding: 2rem;
 }
 
 .navbar ul {
@@ -41,22 +69,58 @@ body {
     color: gainsboro;
 }
 
-/* ============================================ */
+/*                           
+ __  __    _    ___ _   _ 
+|  \/  |  / \  |_ _| \ | |
+| |\/| | / _ \  | ||  \| |
+| |  | |/ ___ \ | || |\  |
+|_|  |_/_/   \_|___|_| \_|
+                          
+*/
 
-.name__center {
-
-    margin-top: 200px;
-    text-align: center;
-    font-size: 60px;
+.height__screen {
+    position: relative;
+    height: 100vh;
 }
 
-/* ============================================ */
+.name__center {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text__main {
+    font-size: 70px;
+    text-align: center;
+}
+
+.main__image {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    right: 0;
+    max-width: 50vw;
+    object-fit: cover;
+}
+
+/*    
+                                                                                                            
+ ____   ___   ____ ___    _    _           ___ ____ ___  _   _ ____  
+/ ___| / _ \ / ___|_ _|  / \  | |         |_ _/ ___/ _ \| \ | / ___| 
+\___ \| | | | |    | |  / _ \ | |          | | |  | | | |  \| \___ \ 
+ ___) | |_| | |___ | | / ___ \| |___       | | |__| |_| | |\  |___) |
+|____/ \___/ \____|___/_/   \_|_____|     |___\____\___/|_| \_|____/                                                                     
+                                                                                                                                                                                                          
+*/
 
 .icons__footer {
+    position: absolute;
     display: flex;
     list-style: none;
-    margin-left: 40px;
-    margin-top: 320px;
+    bottom: 30px;
+    left: 30px;
 }
 
 .icons__footer a {
@@ -67,4 +131,19 @@ body {
     width: 15px;
 }
 
+
 /* ============================================ */
+
+.background__gradient {
+    background: linear-gradient(125deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.name__center2 {
+    color: aliceblue;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 60px;
+}
