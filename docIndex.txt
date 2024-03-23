@@ -1,0 +1,3 @@
+target="_blank": Isso instrui o navegador a abrir o link em uma nova janela ou aba, dependendo da configuração do navegador do usuário. Isso é útil quando 
+você deseja manter a página atual aberta enquanto o usuário acessa o link.
+
