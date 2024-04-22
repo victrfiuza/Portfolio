@@ -7,143 +7,264 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {}
+/* like variables */
+:root{
+    /*color */
+    --bg-color:#ffffff;
+    --text-color:#000;
+    --extra-color:#;
+    --main-color:#191919;
 
-/*                                                                                                                                               
- _   _ _____ ___ ____ _   _ _____   ____   ____ ____  _____ _____ _   _ 
-| | | | ____|_ _/ ___| | | |_   _| / ___| / ___|  _ \| ____| ____| \ | |
-| |_| |  _|  | | |  _| |_| | | |   \___ \| |   | |_) |  _| |  _| |  \| |
-|  _  | |___ | | |_| |  _  | | |    ___) | |___|  _ <| |___| |___| |\  |
-|_| |_|_____|___\____|_| |_| |_|   |____/ \____|_| \_|_____|_____|_| \_|
-                                                                                                                                                                                                              
-*/
-
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*font size */
+    --bigfont-size:5rem;
+    --h2-font:3rem;
+    --p-font:0.8rem;
 }
 
-.justify__right {
-    justify-content: end;
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-
-.height__full {
-    height: 100%;
-}
-
-/*                                                                          
- _   _    ___     _______ ____    _  _____ ___ ___  _   _        ____    _    ____  
-| \ | |  / \ \   / | ____/ ___|  / \|_   _|_ _/ _ \| \ | |      | __ )  / \  |  _ \ 
-|  \| | / _ \ \ / /|  _|| |  _  / _ \ | |  | | | | |  \| |      |  _ \ / _ \ | |_) |
-| |\  |/ ___ \ V / | |__| |_| |/ ___ \| |  | | |_| | |\  |      | |_) / ___ \|  _ < 
-|_| \_/_/   \_\_/  |_____\____/_/   \_|_| |___\___/|_| \_|      |____/_/   \_|_| \_\
-                                                                                                                                         
-*/
-
-.navbar {
+/*/==================== header ====================/*/
+header{
     position: fixed;
-    z-index: 1;
-    width: 100vw;
-    top: 0;
-    padding: 2rem;
-}
-
-.navbar ul {
-    list-style: none;
     display: flex;
-}
-
-.navbar ul li {
-    padding: 0 10px;
-    font-size: 12px;
-}
-
-.navbar ul li a {
-    color: black;
-    text-decoration: none;
-}
-
-.navbar ul li a:hover {
-    color: gainsboro;
-}
-
-/*                           
- __  __    _    ___ _   _ 
-|  \/  |  / \  |_ _| \ | |
-| |\/| | / _ \  | ||  \| |
-| |  | |/ ___ \ | || |\  |
-|_|  |_/_/   \_|___|_| \_|
-                          
-*/
-
-.height__screen {
-    position: relative;
-    height: 100vh;
-}
-
-.name__center {
-    text-align: center;
-    height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.text__main {
-    font-size: 70px;
-    text-align: center;
-}
-
-.main__image {
-    position: absolute;
-    z-index: -1;
-    height: 100%;
+    justify-content: space-between;
+    background: var(--bg-color);
+    width: 100%;
+    top:0;
     right: 0;
-    max-width: 50vw;
-    object-fit: cover;
+    z-index: 1000;
+    padding: 20px 18%;
+    transition: 2s; /*/effect f5/*/
 }
 
-/*    
-                                                                                                            
- ____   ___   ____ ___    _    _           ___ ____ ___  _   _ ____  
-/ ___| / _ \ / ___|_ _|  / \  | |         |_ _/ ___/ _ \| \ | / ___| 
-\___ \| | | | |    | |  / _ \ | |          | | |  | | | |  \| \___ \ 
- ___) | |_| | |___ | | / ___ \| |___       | | |__| |_| | |\  |___) |
-|____/ \___/ \____|___/_/   \_|_____|     |___\____\___/|_| \_|____/                                                                     
-                                                                                                                                                                                                          
-*/
-
-.icons__footer {
-    position: absolute;
+/* ==================== navbar ==================== */
+.navbar{
     display: flex;
+}
+.navbar li{
+    position: relative;
     list-style: none;
-    bottom: 30px;
-    left: 30px;
 }
-
-.icons__footer a {
-    padding: 0 7px;
+.navbar a{
+    text-decoration: none;
+    padding: 25px;
+    font-size:0.8rem;
+    color:var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase; 
 }
-
-.icons__footer a img {
-    width: 15px;
+.navbar a::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: var(--main-color);
+    transition: .5s;
+    bottom: -3px;
+    left: 0;
+    transform: ease .40s;
 }
-
-
-/* ============================================ */
-
-.background__gradient {
-    background: linear-gradient(115deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 100%);
+.navlist a:hover::after{
+    width: 100%;
 }
-
-.name__center2 {
-    color: aliceblue;
-    text-align: center;
+/* ================================================================================================================================================================================*/
+section{
+    padding: 100px 18% ;
+}
+/* ===================================================================== */
+.home{
+    min-height: 100vh;
     height: 100%;
-    display: flex;
-    justify-content: right;
+	width: 100%;
+	background:white;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	grid-gap: 4rem; /* oq ta separando */
+    transition: 2s;
+}
+/* ==================== home text ==================== */
+.home-text h1{
+    margin: 10px 0px 25px;
+    font-size:var(--bigfont-size);
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.home-text h5{
+    margin-bottom: 25px;
+    font-size:  20px;
+    font-weight: 500;
+    color: var(--main-color)
+}
+/* ==================== icon config e bg ==================== */
+.home-social-icons a{
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    background: #191919;
+    border-radius: 50%;
+    display: inline-flex;
     align-items: center;
-    font-size: 60px;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--bg-color);
+    margin-right: 1px;
+}
+.social a:hover{
+    transform: scale(1.1);
+    background: var(--main-color);
+    transition: .5s;
+}
+.home-img img{
+    max-width: 100%;
+    width: 540px;
+    height: auto;
+}
+/* ===================================================================== */
+.aboutme{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    align-items: center;
+    grid-gap: 2rem;
+    background:var(--main-color);
+    color: white;
+}
+.aboutme-img  img{
+    max-width: 100%;
+    width: 540px;
+    height: auto;  
+    border-radius: 50%;
+}
+.aboutme h2{
+    font-size: var(--h2-font);
+    font-weight: 500;
+    margin: 8px 0px 25px;
+    line-height: 1.1;
+}
+.aboutme h3{
+    color:  var(--bg-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+.aboutme p{
+    font-size: 15px;
+}
+/* ===================================================================== 
+                               projects                                 
+   ===================================================================== 
+                                head  */
+.projects-head{
+    text-align: center;
+}
+.projects-head h2{
+    font-size: var(--h2-font);
+    font-weight: 500;
+    margin: 7px 0px 20px;
+    line-height: 1.1;
+}
+.projects-head h3{
+    color: #191919;
+    font-size: 20px;
+    font-weight: 500;
+}
+.projects-head p{
+    font-size: var(--p-font);
+    color: var();
+    line-height: 28px;
+}
+/* =====================================================================
+project elemento principal */
+.projects-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
+    text-align: center;
+    cursor: pointer;
+}
+/* ===================================================================== 
+box*/
+.box{
+    position: relative;
+}
+.box img{
+    max-width: 100%;
+    width: 550px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.layers{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border-radius: 12px;
+    transition: all .40s;
+}
+.layers:hover{
+    background: linear-gradient(rgba(0,0,0,0.5)0%, #191919);
+}
+.layers h3{
+    position:absolute;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    transform: transLateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+}
+.layers:hover h3{
+    bottom: 5%;
+    opacity: 1;
+}
+.layers h5{
+    position:absolute;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    transform: transLateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+}
+.layers:hover h5{
+    bottom: 48%;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/ ==================== footer ====================/*/
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px;
+    font-size:0.5rem;
 }
